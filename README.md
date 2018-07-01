@@ -1,3 +1,7 @@
+バイラテラルフィルタでフィルタリングするコードを以下に示す。
+
+
+
 
 ２値化を行うコードを以下に示す.
 
@@ -28,7 +32,7 @@
         ret, frame = cap.read() #カメラから1コマのデータを取得
         if not ret: continue
 
-        frame_g=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        frame_g=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #取得画像をグレースケールに変換
 
         v = cv2.getTrackbarPos('value',  'title')  
 
@@ -47,3 +51,8 @@
 
 
 <br>
+cv2.threshold:引数は入力画像、しきい値、最大値、行う２値化の処理
+cv2.createTrackbar:引数はトラックバーの名前、表示するウィンドの名前、最小値、最大値、スライダの位置が変更されるたびに呼び出される関数のポインタ
+While文の中で関数myfuncを呼び出してcapture2_1.py同様取得した画像に対して処理を行うようにしている。
+実際の様子:https://youtu.be/K485q5yFnG4 <br>
+参考サイト:http://pynote.hatenablog.com/entry/opencv_how_to_binarize　、　http://opencv.jp/opencv-2.1/cpp/user_interface.html
