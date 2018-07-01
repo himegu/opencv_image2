@@ -7,13 +7,13 @@ def myfunc(x):
     output = cv2.bilateralFilter(frame,15,x,x)
 
 
-cv2.namedWindow('title') # create win with win name
+cv2.namedWindow('title') 
 
-cv2.createTrackbar('value', # name of value
-                   'title', # win name
-                   0, # min
-                   100, # max
-                   myfunc) # callback func
+cv2.createTrackbar('value', 
+                   'title', 
+                   0, 
+                   100, 
+                   myfunc) 
 
 
 cap = cv2.VideoCapture(1)
@@ -29,13 +29,12 @@ while(True):
 
     #img_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
   
-    v = cv2.getTrackbarPos('value',  # get the value
-                           'title')  # of the win
+    v = cv2.getTrackbarPos('value',  
+                           'title') 
 
-    ## do something by using v
     myfunc(v)
 
-    cv2.imshow('title', output)  # show in the win
+    cv2.imshow('title', output)  
 
     k = cv2.waitKey(1)
     if k == ord('q') or k == 27:
