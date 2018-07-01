@@ -1,7 +1,8 @@
 
 ２値化を行うコードを以下に示す.
 
-import numpy as np
+
+'import numpy as np
 import cv2
 
 def myfunc(i):    #画像の２値化を行う関数
@@ -42,7 +43,7 @@ while(True):
 
 
 cap.release() # キャプチャをリリース
-cv2.destroyAllWindows() #ウィンドウをすべて閉じる
+cv2.destroyAllWindows() #ウィンドウをすべて閉じる'
 
 
 <br>
