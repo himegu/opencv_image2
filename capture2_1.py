@@ -1,4 +1,4 @@
-anaimport numpy as np
+import numpy as np
 import cv2
 
 def myfunc(x):
